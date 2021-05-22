@@ -3,3 +3,5 @@
 - hosts: web_servers
   become: true
   roles:
+    - pwquality_install
+
