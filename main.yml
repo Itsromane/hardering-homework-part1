@@ -4,4 +4,5 @@
   become: true
   roles:
     - pwquality_install
+    - file_replacement
 

@@ -1,0 +1,8 @@
+---
+- name: Changed conf file
+  lineinfile: 
+    path: /etc/pam.d/common-password
+    #Строка, заканчивающаяся на retry=3$ в дефолтном файле уникальна
+    regexp: 'retry=3$'
+    line: 'password        requisite                       pam_pwquality.so retry=3 usercheck=1 reject_username enforce_for_root'
+    backrefs: yes
